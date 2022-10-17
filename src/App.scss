@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+*::-webkit-scrollbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 0.2em;
+}
+
+*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+background-color: #2a7561;
+outline: 1px solid #2a7561;
+}
+
+.App{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #044f48, #2a7561);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.3;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.app-body{
+  @include center;
+  z-index: 2;
+  margin: auto;
+  width: 40%;
+  display: flex;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url('https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fprod-upp-image-read.ft.com%2F2f2c34aa-1cee-11e6-a7bc-ee846770ec15?source=next-opengraph&amp;fit=scale-down&amp;width=900') no-repeat 0 0;
+  filter: blur(80px);
+  transform: scale(1.2);
+}
