@@ -4,8 +4,7 @@ import socketIOClient from "socket.io-client";
 import { useEffect, useState } from "react";
 import RegisterForm from "./components/registerForm/registerForm";
 import MessagesLits from "./components/messagesList/messagesList";
-const ENDPOINT = "http://localhost:3333";
-const socket = socketIOClient(ENDPOINT);
+const socket = socketIOClient(process.env.ENDPOINT);
 
 const App = () => {
   const [user, setUser] = useState(null);
